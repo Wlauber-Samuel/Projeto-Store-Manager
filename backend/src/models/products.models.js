@@ -41,12 +41,10 @@ const addNewSale = async (sale) => {
         'INSERT INTO sales (date) VALUES (?)',
         [new Date()],
     );
-    const result = sale.map(async (item) => {
-        await connection.execute(
+    const result = sale.map((item) => connection.execute(
             'INSERT INTO sales_products (sale_id, product_id, quantity) VALUES (?, ?, ?)',
             [insertId, item.productId, item.quantity],
-        );
-    });
+        ));
     await Promise.all(result);
     return insertId;
 };

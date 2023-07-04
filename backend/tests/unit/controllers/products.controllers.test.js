@@ -127,21 +127,4 @@ describe('Testando o product controller', function () {
       name: 'Martelo de Thor',
     })).to.be.equal(true);
   });
-
-  // it('Testa se o deleteProduct caso de sucesso', async function () {
-  //   const req = {
-  //     params: {
-  //       id: 1,
-  //     },
-  //   };
-  //   const res = {
-  //     status: sinon.stub().returnsThis(),
-  //     json: sinon.stub().returns(),
-  //   };
-  //   sinon.stub(productsService, 'deleteProduct').resolves({ id: 1, name: Martelo });
-  //   await productsController.deleteProduct(req, res);
-
-  //   expect(res.status.calledWith(200)).to.be.equal(true);
-  //   expect(res.json.calledWith({ id: 1, name: Martelo })).to.be.equal(true);
-  // });
 });
